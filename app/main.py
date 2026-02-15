@@ -33,11 +33,7 @@ class Dog(Animal):
 
 
 def feed_animals(animals_list: list) -> int:
-    hunger_points = 0
-    for animal in animals_list:
-        hunger_points += animal.feed()
-
-    return hunger_points
+    return sum(animal.feed() for animal in animals_list)
 
 
 if __name__ == "__main__":
